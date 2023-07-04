@@ -163,6 +163,8 @@ if (typeof unknown === "number") {
   console.log(unknown, "non è un numero");
 }
 
+console.log("****************************************************************");
+
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari 
   (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -173,8 +175,11 @@ const xx = 11;
 if (xx % 2 === 0) console.log(xx, " è pari");
 else console.log(xx, " è dispari");
 
+console.log("****************************************************************");
+
 /* ESERCIZIO 10
-  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
+  Modifica la logica del seguente algoritmo in modo che mostri in console il 
+  messaggio corretto in ogni circostanza.
   let val = 7
   if (val < 10) {
       console.log("Meno di 10");
@@ -185,10 +190,20 @@ else console.log(xx, " è dispari");
     }
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 3;
+if (val < 10 && val >= 5) {
+  console.log("Meno di 10");
+} else if (val < 5) {
+  console.log("Meno di 5");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 11
-  Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
+  Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà 
+  "city", il cui valore sarà "Toronto".
 */
 
 const me = {
@@ -197,28 +212,63 @@ const me = {
   skills: ["javascript", "html", "css"],
 };
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log(me);
+
+me.city = "Toronto";
+
+console.log(me);
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 12
-  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
+  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per 
+  rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+
+console.log(me);
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 13
-  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
+  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per 
+  rimuovere l'ultimo elemento della proprietà "skills".
 */
+console.log(me.skills);
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop();
+
+console.log(me.skills);
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 14
-  Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
+  Scrivi del codice per creare un array inizialmente vuoto. Riempilo 
+  successivamente con i numeri da 1 a 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const myArray = [];
+
+console.log(myArray);
+
+myArray[0] = 11;
+
+for (k = 0; k < 10; k++) {
+  myArray[k] = k + 1;
+}
+
+console.log(myArray);
 
 /* ESERCIZIO 15
-  Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
+  Scrivi del codice per sostituire l'ultimo elemento dell'array, 
+  ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("****************************************************************");
+
+console.log(myArray[9]);
+
+if (myArray[9] === 10) myArray[9] = 100;
+
+console.log(myArray[9]);
