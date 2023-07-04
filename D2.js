@@ -58,6 +58,7 @@ if (r === 8 || s === 8) {
   }
 } else {
   if (r + s === 8) console.log("la somma di r + s è uguale a 8");
+  if (r - s === 0) console.log("la sottrazione di r ed s è uguale a 0 (sono lo stersso numero)");
 }
 
 console.log("****************************************************************");
