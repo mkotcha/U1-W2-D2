@@ -71,14 +71,15 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 */
 
 const chart = {
-  itemsPrice: [12, 35, 8, 10],
+  itemsPrice: [12, 24, 8, 10],
 };
 
+// calcola la somma di tutti i valori di un array
 chart.partialTotal = chart.itemsPrice.reduce(function (previousValue, currentValue) {
   return previousValue + currentValue;
 });
 
-console.log(`Total without sped ${chart.partialTotal}`);
+console.log(`Total without shipping cost ${chart.partialTotal}`);
 
 if (chart.partialTotal > 50) {
   console.log(`Free shipping`);
@@ -92,34 +93,85 @@ console.log(`Total ${chart.totalShoppingCart}`);
 
 console.log("****************************************************************");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 6
-  Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
-  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
+  Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene 
+  applicato il 20% su ogni prodotto.
+  Modifica la risposta precedente includendo questa nuova promozione 
+  nell'algoritmo, determinando come prima se le spedizioni sono gratuite 
+  oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+chart.partialTotal = chart.partialTotal * 0.8;
+
+console.log("Black Friday sale! - Total without shipping cost", chart.partialTotal);
+
+if (chart.partialTotal > 50) {
+  console.log(`Free shipping`);
+  chart.totalShoppingCart = chart.partialTotal;
+} else {
+  console.log("caccia la moneta!");
+  chart.totalShoppingCart = chart.partialTotal + 10;
+}
+
+console.log(`Total ${chart.totalShoppingCart}`);
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
-  Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
+  Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo 
+  il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let x = 51,
+  y = 165,
+  z = 123;
+
+if (x > y) {
+  if (y > z) {
+    console.log(x, y, z);
+  } else {
+    if (z > x) {
+      console.log(z, x, y);
+    } else console.log(x, z, y);
+  }
+} else {
+  if (y > z) {
+    if (z > x) {
+      console.log(y, z, x);
+    } else {
+      console.log(y, x, z);
+    }
+  } else {
+    console.log(z, y, x);
+  }
+}
+
+console.log("****************************************************************");
 
 /* ESERCIZIO 8
-  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
+  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no 
+  (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let unknown = "5";
+
+if (typeof unknown === "number") {
+  console.log(unknown, "è un numero");
+} else {
+  console.log(unknown, "non è un numero");
+}
 
 /* ESERCIZIO 9
-  Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
+  Crea un algoritmo per controllare se un numero fornito sia pari o dispari 
+  (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const xx = 11;
+
+if (xx % 2 === 0) console.log(xx, " è pari");
+else console.log(xx, " è dispari");
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
